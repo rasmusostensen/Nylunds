@@ -19,7 +19,7 @@ function CarStill({ className }: { className?: string }) {
     video.setAttribute('muted', '');
     video.setAttribute('playsinline', '');
     video.setAttribute('preload', 'auto');
-    video.src = '/intro.mp4';
+    video.src = import.meta.env.BASE_URL + 'intro.mp4';
 
     let disposed = false;
 

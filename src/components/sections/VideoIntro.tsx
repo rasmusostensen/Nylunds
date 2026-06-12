@@ -103,7 +103,7 @@ export function VideoIntro() {
       <div className="sticky top-0 h-[100dvh] overflow-hidden">
         <video
           ref={setVideoRef}
-          src="/intro.mp4"
+          src={import.meta.env.BASE_URL + 'intro.mp4'}
           muted
           playsInline
           autoPlay
