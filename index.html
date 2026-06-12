@@ -12,6 +12,13 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // GitHub Pages SPA redirect: 404.html sends /?p=/path here
+      (function() {
+        var q = new URLSearchParams(location.search).get('p');
+        if (q) history.replaceState(null, '', '/Nylunds' + q + location.hash);
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

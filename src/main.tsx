@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       { path: '*', element: <Navigate to="/" replace /> },
     ],
   },
-]);
+], { basename: '/Nylunds' });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
