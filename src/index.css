@@ -1,0 +1,76 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-background: #0b0b0c;
+  --color-surface: #121214;
+  --color-surface-2: #18181b;
+  --color-foreground: #f4f3f1;
+  --color-muted: #9d9d9b;
+  --color-faint: #5e5e5c;
+  --color-line: rgba(244, 243, 241, 0.09);
+  --color-accent: #d92c25;
+
+  --font-sans: 'Archivo Variable', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(217, 44, 37, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Marquee for anmeldelser: to rader som glir i hver sin retning */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-row {
+  animation: marquee 70s linear infinite;
+}
+
+.marquee-reverse {
+  animation-direction: reverse;
+  animation-duration: 85s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-row {
+    animation: none;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-inline: 1.5rem;
+  }
+}
+
+/* Thin elegant scrollbar on the dark theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0b0c;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2d;
+  border-radius: 5px;
+}
