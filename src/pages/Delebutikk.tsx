@@ -29,9 +29,15 @@ export function Delebutikk() {
       />
 
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
-        {/* Bildeplass: butikk/delelager */}
+        {/* Merkologoer */}
         <Reveal>
-          <ImageSlot label="Butikk og delelager" className="aspect-[21/9] w-full" />
+          <div className="rounded-sm bg-white/[0.06] p-8 ring-1 ring-white/10">
+            <img
+              src={import.meta.env.BASE_URL + 'vaaremerker_logoer.png'}
+              alt="DAYCO, MAHLE, Mobil, OPTIMAL, NBS, EUROGLOBE, NGK, MANN FILTER"
+              className="w-full"
+            />
+          </div>
         </Reveal>
 
         {/* Avdelinger */}
@@ -45,7 +51,7 @@ export function Delebutikk() {
         </div>
 
         {/* Åpningstider og bestilling */}
-        <Reveal className="mt-20 grid gap-12 border-t border-line pt-16 lg:grid-cols-2">
+        <Reveal className="mt-20 border-t border-line pt-16">
           <div>
             <h2 className="text-lg font-medium text-foreground">Generelle åpningstider</h2>
             <dl className="mt-6 max-w-sm space-y-3">
@@ -87,19 +93,6 @@ export function Delebutikk() {
                 </a>
               </li>
             </ul>
-          </div>
-
-          {/* Noen av våre merker: erstattes med kundens logo-bilder */}
-          <div>
-            <h2 className="text-lg font-medium text-foreground">Noen av våre merker</h2>
-            <div className="mt-8 grid grid-cols-3 gap-x-6 gap-y-10">
-              <span className="text-sm font-semibold tracking-[0.3em] text-faint">BOSCH</span>
-              <span className="text-sm font-extralight tracking-[0.42em] text-faint">VARTA</span>
-              <span className="text-sm font-light italic tracking-[0.2em] text-faint">Hella</span>
-              <span className="text-sm font-medium tracking-[0.5em] text-faint">NGK</span>
-              <span className="text-sm font-light tracking-[0.34em] text-faint">EXIDE</span>
-              <span className="text-sm font-normal tracking-[0.26em] text-faint">CASTROL</span>
-            </div>
           </div>
         </Reveal>
 
