@@ -29,14 +29,12 @@ export function Delebutikk() {
       />
 
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
-        {/* Merkologoer */}
+        {/* Merkelogoer */}
         <Reveal>
-          <div className="rounded-sm bg-white/[0.06] p-8 ring-1 ring-white/10">
-            <img
-              src={import.meta.env.BASE_URL + 'vaaremerker_logoer.png'}
-              alt="DAYCO, MAHLE, Mobil, OPTIMAL, NBS, EUROGLOBE, NGK, MANN FILTER"
-              className="w-full"
-            />
+          <div className="grid grid-cols-4 gap-4 sm:grid-cols-8">
+            {['DAYCO', 'MAHLE', 'Mobil', 'OPTIMAL', 'NBS', 'EUROGLOBE', 'NGK', 'MANN FILTER'].map((brand) => (
+              <ImageSlot key={brand} label={brand} className="aspect-[3/2]" />
+            ))}
           </div>
         </Reveal>
 
