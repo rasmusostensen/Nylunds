@@ -135,30 +135,6 @@ export function Hero() {
         <CarStill className="aspect-[16/9] w-full object-contain opacity-90 [mask-image:linear-gradient(to_bottom,transparent_0%,black_18%,black_84%,transparent_100%)]" />
       </motion.div>
 
-      {/* Merkestripe nederst, som i referansen. Erstattes med ekte logo-bilder fra kunden. */}
-      <motion.div
-        className="relative mx-auto mt-20 w-full max-w-[1400px] px-6 pb-12 lg:px-12"
-        {...up(0.55)}
-        aria-label="Noen av våre merker"
-      >
-        <div className="grid grid-cols-3 items-center gap-x-6 gap-y-8 sm:grid-cols-5">
-          <span className="text-center text-sm font-semibold tracking-[0.3em] text-faint transition-colors duration-300 hover:text-muted">
-            BOSCH
-          </span>
-          <span className="text-center text-sm font-extralight tracking-[0.42em] text-faint transition-colors duration-300 hover:text-muted">
-            VARTA
-          </span>
-          <span className="text-center text-sm font-light italic tracking-[0.2em] text-faint transition-colors duration-300 hover:text-muted">
-            Hella
-          </span>
-          <span className="text-center text-sm font-medium tracking-[0.5em] text-faint transition-colors duration-300 hover:text-muted">
-            NGK
-          </span>
-          <span className="text-center text-sm font-light tracking-[0.34em] text-faint transition-colors duration-300 hover:text-muted">
-            EXIDE
-          </span>
-        </div>
-      </motion.div>
     </section>
   );
 }
